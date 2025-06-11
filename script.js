@@ -24,3 +24,23 @@ function createHeart() {
   setTimeout(() => heart.remove(), 10000);
 }
 setInterval(createHeart, 500);
+
+const musica = document.getElementById('musica');
+
+// Adiciona evento para toque na tela ou clique
+document.body.addEventListener('click', tocarMusica);
+document.body.addEventListener('touchstart', tocarMusica);
+
+function tocarMusica() {
+  musica.play()
+    .then(() => {
+      console.log("Música tocando");
+    })
+    .catch((e) => {
+      console.error("Erro ao tentar tocar a música:", e);
+    });
+    
+   // Remove os eventos para não tocar de novo se tocar outra vez
+    document.body.removeEventListener('click', tocarMusica);
+    document.body.removeEventListener('touchstart', tocarMusica);
+    }
