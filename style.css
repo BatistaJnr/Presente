@@ -10,7 +10,7 @@ body {
 
 .mensagem {
   position: absolute;
-  top: 70%;
+  top: 1500px;
   width: 100%;
   z-index: 2;
   text-shadow: 2px 2px 4px #00000050;
@@ -25,7 +25,7 @@ body {
 
 .slideshow-container {
   position: absolute;
-  top: 38%;
+  top: 750px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
