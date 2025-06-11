@@ -10,7 +10,7 @@ body {
 
 .mensagem {
   position: absolute;
-  top: 1450px;
+  top: 1400px;
   width: 100%;
   z-index: 2;
   text-shadow: 2px 2px 4px #00000050;
