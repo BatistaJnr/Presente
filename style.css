@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  font-family: 'Arial', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.mensagem {
+  position: absolute;
+  top: 85%;
+  width: 100%;
+  z-index: 2;
+  text-shadow: 2px 2px 4px #00000050;
+  font-size: xx-large;
+}
+
+
+.slideshow-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 1280px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000;
+  z-index: 1;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  /* position: absolute; */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('coracao.png') no-repeat center;
+  background-size: contain;
+  animation: fall 10s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+html {
+  background-color: #ee9ca7;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
